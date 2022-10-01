@@ -2,10 +2,14 @@
   @extend %section;
   padding-top: 0;
 
-  & .activities__list {
-    display: flex;
-    gap: 30px;
+  @media screen and (max-width: 1199px) {
+    display: none;
   }
+}
+
+.activities__list {
+  display: flex;
+  gap: 30px;
 }
 
 .activities-list__item {
