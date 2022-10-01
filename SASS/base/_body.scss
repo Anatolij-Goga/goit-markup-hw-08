@@ -1,0 +1,9 @@
+body {
+  font-family: $main-font;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+
+  color: var(--main-txt-color);
+  background-color: var(--main-bg-color);
+}

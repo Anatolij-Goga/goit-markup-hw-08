@@ -1,0 +1,30 @@
+/* Fonts */
+
+$main-font: Roboto, sans-serif;
+$secondary-font: Raleway, sans-serif;
+
+:root {
+  /* Text Colors */
+
+  --main-txt-color: #212121;
+  --secondary-txt-color: #757575;
+  --accent-color: #2196f3;
+  --light-white-color: #ffffff;
+  --logo-color: #000000;
+  --svg-color: #afb1b8;
+
+  /* Background colors */
+
+  --main-bg-color: #ffffff;
+  --secondary-bg-color: #2f303a;
+  --accent-bg-color: #2196f3;
+  --footer-bg-color: #2f303a;
+  --light-grey-color: #f5f4fa;
+  --white-bg-color-transparency: rgba(255, 255, 255, 0.1);
+  --border-color-item: #eeeeee;
+
+  /* Others */
+
+  --transition-duration: 250ms;
+  --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

@@ -1,0 +1,34 @@
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  border-bottom: 1px solid #ececec;
+
+  & .contacts {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+
+  & .contacts .e-mail-icon,
+  & .contacts .smartphone-icon {
+    margin-right: 10px;
+    fill: currentColor;
+  }
+
+  & .contacts .e-mail-icon {
+    width: 16px;
+    height: 12px;
+  }
+
+  & .contacts .smartphone-icon {
+    width: 10px;
+    height: 16px;
+  }
+}
+
+.header-nav {
+  margin-right: auto;
+}
