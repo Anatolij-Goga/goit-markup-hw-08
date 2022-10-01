@@ -1,148 +1,138 @@
 .footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  background-color: var(--footer-bg-color);
+  background-color: var(--secondary-bg-color);
+  padding: 60px 0;
 }
 
-.footer .container {
+.footer-container {
   display: flex;
   align-items: baseline;
 }
 
-.column-1 {
+.footer__column-1 {
   margin-right: 70px;
 }
 
-.footer .logo {
-  display: block;
-  margin-right: 0;
+.footer__column-3 {
+  margin-left: auto;
+}
+
+.footer__logo {
   margin-bottom: 20px;
+
   color: var(--light-white-color);
 }
 
-address {
-  font-style: inherit;
+.footer__logo--accent-color {
+  color: var(--accent-color);
 }
 
-.address {
-  margin-bottom: 9px;
+.footer-address-list,
+.footer-address__address {
+  padding-left: 0px;
+  margin-top: 0px;
 
-  color: var(--light-white-color);
   font-weight: 400;
   font-size: 14px;
   line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+  font-style: normal;
 }
 
-.footer-container .contacts .list:first-child {
+.footer-address__address {
+  color: var(--light-white-color);
   margin-bottom: 9px;
 }
 
-.footer-container .link {
-  padding-top: 0;
-  padding-bottom: 0;
+.footer-address-list__link {
+  display: block;
+  color: var(--address-color);
+
+  transition: color var(--transition-duration) var(--transition-timing-function);
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--accent-color);
+  }
 }
 
-.footer .link {
-  color: rgba(255, 255, 255, 0.6);
+.footer-address-list__item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
-.join-title {
+.footer__join,
+.footer__subscribe {
   margin-bottom: 20px;
-  font-family: inherit;
-  font-style: normal;
+
   font-weight: 700;
   font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.03em;
+  line-height: calc(16 / 14);
   text-transform: uppercase;
   text-align: left;
   color: var(--light-white-color);
 }
 
-.column-2 .join {
-  display: flex;
+.footer-social-list,
+.footer-subscription,
+.footer-subscription__button {
+  @extend %alignmentflex;
   gap: 10px;
-  justify-content: center;
-  align-items: center;
 }
 
-.footer .join-item {
+.footer-social-list__item {
   width: 44px;
   height: 44px;
 }
 
-.footer .join-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.footer-social-list__link {
+  @extend %alignmentflex;
   width: 100%;
   height: 100%;
   border-radius: 50%;
 
   color: var(--light-white-color);
   background-color: var(--white-bg-color-transparency);
+
   transition: color var(--transition-duration) var(--transition-timing-function),
-    background-color var(--transition-duration)
-      var(--transition-timing-function);
+    background-color var(--transition-duration) var(--transition-timing-function);
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: var(--accent-color);
+    color: var(--light-white-color);
+  }
 }
 
-.join-link .footer-svg {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
+.footer-social-list__icon {
+  @include icons(20px, 20px);
 }
 
-.join .link:hover,
-.join .link:focus,
-.join .link:active {
-  background-color: var(--accent-bg-color);
-  border-radius: 50%;
-  color: var(--light-white-color);
-}
-
-.column-2 {
-  margin-right: 93px;
-}
-
-.column-3 input {
+.footer-subscription__email-input {
   width: 358px;
-  height: 50px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 16px;
+  padding: 15px 0px 15px 16px;
   margin-right: 12px;
 
+  border: 1px solid var(--subscription-border-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  font-family: $main-font;
+  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: calc(20 / 16);
-
-  align-items: center;
   letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
+
   background-color: inherit;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
+  color: var(--address-color);
+
+  &:focus {
+    border: 1px solid var(--accent-color);
+  }
 }
 
-.column-3 .button {
-  display: inline-flex;
-  justify-content: space-evenly;
-  gap: 10px;
-  padding: 10px 28px;
-  width: 200px;
-  height: 50px;
-
-  align-items: center;
-  font-weight: 700;
-  line-height: calc(30 / 16);
-  letter-spacing: 0.06em;
-
-  color: var(--light-white-color);
-  background-color: var(--accent-bg-color);
-}
-
-.column-3 .button-svg {
-  width: 24px;
-  height: 24px;
+.footer-subscription__icon {
+  @include icons(24px, 24px);
+  margin-left: 10px;
 }
