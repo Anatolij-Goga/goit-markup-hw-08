@@ -1,11 +1,22 @@
 .footer {
-  background-color: var(--secondary-bg-color);
   padding: 60px 0;
+
+  background-color: var(--secondary-bg-color);
 }
 
 .footer-container {
-  display: flex;
-  align-items: baseline;
+  @media screen and(min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+.footer-contacts {
+  @media screen and(min-width: 768px) {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+  }
 }
 
 .footer__column-1 {
@@ -130,6 +141,12 @@
   &:focus {
     border: 1px solid var(--accent-color);
   }
+}
+
+.footer-subscription__button:hover,
+.footer-subscription__button:focus,
+.footer-subscription__button:active {
+  background-color: var(--accent-color-button);
 }
 
 .footer-subscription__icon {
