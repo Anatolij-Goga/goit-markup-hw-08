@@ -5,6 +5,7 @@
 .portfolio-filters-list,
 .portfolio-projects-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -12,9 +13,20 @@
 }
 
 .portfolio-filters-list {
-  justify-content: center;
   gap: 8px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 769px) {
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 
 .portfolio-filters-list__button {
@@ -49,17 +61,20 @@
   color: var(--light-white-color);
 }
 
-.portfolio-projects-list {
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
 .portfolio-projects-list__item {
-  max-width: 370px;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 60px) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 90px) / 3);
+  }
 }
 
 .portfolio-projects-list__link {
-  display: block;
+  @extend %displayblock;
   width: 100%;
   border: 1px solid var(--border-color-item);
   transition: box-shadow var(transition-duration) (transition-timing-function);
@@ -153,7 +168,6 @@
 
 .portfolio-projects-description__title {
   margin-bottom: 4px;
-  text-align: left;
   font-size: 18px;
   line-height: calc(36 / 18);
   letter-spacing: 0.06em;

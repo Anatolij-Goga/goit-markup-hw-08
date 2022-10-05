@@ -13,7 +13,7 @@
 }
 
 .activities-list__item {
-  display: block;
+  @extend %displayblock;
   position: relative;
   width: 370px;
 }
