@@ -1,0 +1,13 @@
+.menu-mobile__button {
+  @extend %alignmentflex;
+
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin-left: auto;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
