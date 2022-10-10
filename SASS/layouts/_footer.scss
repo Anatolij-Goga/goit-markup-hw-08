@@ -145,7 +145,7 @@
 .footer-social-list,
 .footer-subscription__button {
   @extend %alignmentflex;
-  gap: 10px;
+  gap: 12px;
 }
 
 .footer-social-list__item {
@@ -217,5 +217,4 @@
 
 .footer-subscription__icon {
   @include icons(24px, 24px);
-  margin-left: 10px;
 }
