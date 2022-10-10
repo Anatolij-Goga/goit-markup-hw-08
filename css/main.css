@@ -446,6 +446,11 @@ body {
 }
 @media screen and (min-width: 768px) {
   .site-list__item {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .site-list__item {
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -548,6 +553,7 @@ body {
             flex-direction: column;
     margin-top: 0px;
     margin-left: auto;
+    gap: 10px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -565,6 +571,16 @@ body {
 
 .contact-list__item:last-child {
   margin-bottom: 32px;
+}
+@media screen and (min-width: 768px) {
+  .contact-list__item:last-child {
+    margin-bottom: 0px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact-list__item:last-child {
+    margin-left: 30px;
+  }
 }
 
 .contact-list__tel {
@@ -593,15 +609,13 @@ body {
     font-weight: 500;
     text-align: left;
     color: currentColor;
-    padding-bottom: 21px;
-    padding-top: 10px;
+    padding-bottom: 0px;
     margin-bottom: 0px;
   }
 }
 @media screen and (min-width: 1200px) {
   .contact-list__tel {
     margin-top: 0px;
-    margin-left: 30px;
     margin-bottom: 0px;
   }
 }
@@ -957,25 +971,31 @@ body {
 
 .team-list__item {
   width: 100%;
-  margin-bottom: 30px;
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
   background-color: var(--light-white-color);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
+.team-list__item:not(:last-child) {
+  margin-bottom: 30px;
+}
 @media screen and (min-width: 768px) {
   .team-list__item {
     -ms-flex-preferred-size: calc((100% - 30px) / 2);
         flex-basis: calc((100% - 30px) / 2);
-    margin-bottom: 0;
+  }
+  .team-list__item:not(:last-child) {
+    margin-bottom: 0px;
   }
 }
 @media screen and (min-width: 1200px) {
   .team-list__item {
     -ms-flex-preferred-size: calc((100% - 90px) / 4);
         flex-basis: calc((100% - 90px) / 4);
-    margin-bottom: 0;
+  }
+  .team-list__item:not(:last-child) {
+    margin-bottom: 0px;
   }
 }
 
@@ -1104,13 +1124,22 @@ body {
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
-    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-contacts {
+    margin-bottom: 0px;
   }
 }
 
 .footer__column-1 {
   text-align: center;
   margin-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .footer__column-1 {
+    margin-bottom: 0px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .footer__column-1 {

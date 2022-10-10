@@ -132,6 +132,11 @@
   &:last-child {
     margin-bottom: 0;
   }
+
+  @media screen and(min-width: 768px) {
+    margin: 0;
+  }
+
   @media screen and(min-width: 768px) {
     position: relative;
     display: flex;
@@ -213,6 +218,7 @@
     flex-direction: column;
     margin-top: 0px;
     margin-left: auto;
+    gap: 10px;
   }
 
   @media screen and(min-width: 1200px) {
@@ -224,6 +230,14 @@
 
 .contact-list__item:last-child {
   margin-bottom: 32px;
+
+  @media screen and(min-width: 768px) {
+    margin-bottom: 0px;
+  }
+
+  @media screen and(min-width: 1200px) {
+    margin-left: 30px;
+  }
 }
 
 .contact-list__tel {
@@ -237,13 +251,13 @@
     color: currentColor;
     @include font(12px, calc(14 / 12), 0.02em, 500, left);
     color: currentColor;
-    padding-bottom: 21px;
-    padding-top: 10px;
+    padding-bottom: 0px;
     margin-bottom: 0px;
   }
+
   @media screen and(min-width: 1200px) {
     margin-top: 0px;
-    margin-left: 30px;
+
     margin-bottom: 0px;
   }
 }
